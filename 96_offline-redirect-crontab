@@ -1,0 +1,9 @@
+#!/bin/sh
+
+#this is a script to be added to community images
+#it adds offline redirect (or another script) to the lime crontab
+#in this case it will run every 4 minutes
+#it must be placed in /etc/uci_defaults/ in the image
+
+echo "adding offline-redirect script to crontab"
+echo "*/4 * * * * /usr/bin/offline-redirect.sh" >> /etc/crontabs/root
